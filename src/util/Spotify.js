@@ -1,5 +1,5 @@
-const clientId = process.env.SPOTIFY_KEY;
-const redirectUri = "http://localhost:3000/";  
+const clientId = "3a2d27a8d995433280e3525bea203277";
+const redirectUri = "https://gorgeous-druid-734204.netlify.app/";  
 let accessToken;
 
 const Spotify = { 
@@ -36,7 +36,6 @@ const Spotify = {
                 return response.json()
             }).then(jsonResponse => {
                 if (!jsonResponse.tracks) {
-                    alert("called with " + term);
                     return []
                 }
                 return jsonResponse.tracks.items.map(track => ({
